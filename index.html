@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DENTYTECH</title>
+    <!-- Css  -->
+     <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+    <!-- JAVASCRIPT IMG opening system  -->
+
+    <div class="imgoverlaybox">
+      <span>&times;</span>
+      <img src="/Web images\3.webp" alt="">
+    </div>
+        <!-- Tasveer aur Black Overlay KO open KErne ke liye DO classes -->
+    <div class="imgOverlayBoxshow"></div>
+
+
+
+    <!-- Header Section  -->
+    <header>
+      <div class="leftside">
+        <h3>Menu</h3>
+        <p>#</p>
+      </div>
+      <div class="middle">
+        <h2>DENTYTECH</h2>
+      </div>
+      <div class="rightside">
+        <button class="btn1" type="submit"><a href="login.html" target="_blank">Login</a></button>
+        <button class="btn2" type="submit"><a href="#">SignUp</a></button>
+      </div>
+    </header>
+    <h1 class="main-heading">OUR ADVANTAGES</h1>
+    <div class="photos" id="gallery">
+        <img id="img1" src="Images/1.webp" alt="">
+        <img id="img2" src="Images/2.webp" alt="">
+        <img id="img3" src="Images/4.webp" alt="">
+        <img id="img4" src="Images/3.webp" alt="">
+    </div>
+
+
+
+    <div class="footer">
+      <div class="lowername">
+        <p>Your Smile, our Passion</p>
+      </div>
+      <div class="links">
+        <a href="https://web.facebook.com" target="_blank"><img src="Social Icons/facebook.png" alt=""></a>
+        <a href="https://instagram.com" target="_blank"><img src="Social Icons/Instagram.png" alt=""></a>
+        <a href="https://x.com" target="_blank"><img src="Social Icons/Twitter.png" alt=""></a>
+        <p>Best Startup OF, 2025</p>
+      </div>
+    </div>
+
+
+
+    <!-- JAVASCRIPT  -->
+    <script>
+//let overlay=document.querySelector(".imgoverlayBG")
+let imgbox=document.querySelector(".imgoverlaybox")
+var img=document.querySelector(".imgoverlaybox img")
+let close=document.querySelector(".imgoverlaybox span")
+
+      let Gallery=document.querySelector("#gallery")
+      gallery.addEventListener("click",(event)=>{
+        let currentImagePath=event.target.src; //get image path
+
+        if(currentImagePath!==undefined){
+          //overlay.classList.add('OverlayBGshow') 
+        imgbox.classList.add('imgOverlayBoxshow')
+        img.src=currentImagePath;
+
+        console.log(currentImagePath)
+
+        }
+
+      })
+
+      close.addEventListener("click",()=>{
+        //overlay.classList.remove('OverlaysBGhow') 
+        imgbox.classList.remove('imgOverlayBoxshow')
+        // overlay.classList.remove('imgoverlayBG')
+      })
+
+      
+    </script>
+
+    
+  </body>
+</html>
